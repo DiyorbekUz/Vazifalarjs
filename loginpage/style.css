@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(115, 160, 245);
+}
+
+h1{
+    text-align: center;
+    font-family: Arial;
+}
+
+.container{
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    width: 300px;
+    height: 280px;
+    padding: 3px;
+    margin: 300px auto;
+}
+
+.username{
+    background-color: rgb(233, 236, 231);
+    border-radius: 5px;
+    margin: 0 auto;
+    width:250px ;
+    height: 20px;
+    font-size: 15px;
+    border: 2px solid #5eff00;
+    padding: 12px;
+    color: #111;
+    font-weight: 500;
+    position: relative;
+}
+
+.password{
+    background-color: rgb(233, 236, 231);
+    border-radius: 5px;
+    margin: 10px auto;
+    width:250px ;
+    height: 20px;
+    font-size: 15px;
+    border: 2px solid #09ff00;
+    padding: 12px;
+    color: #111;
+    font-weight: 500;
+    position: relative;
+}
+
+.container button{
+    font-family: Arial;
+    color: #fff;
+    background-color: rgb(96, 241, 29);
+    border-radius: 7px;
+    width: 45%;
+    height: 45px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 17px;
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    color: #fff
+}
+
+a{
+    color:rgb(251, 255, 25)
+}

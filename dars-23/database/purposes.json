@@ -1,0 +1,8 @@
+[
+	{ "id": 1, "type": "expanse", "text": "oziq-ovqat" },
+	{ "id": 2, "type": "expanse", "text": "transport" },
+	{ "id": 3, "type": "expanse", "text": "qurilish" },
+	{ "id": 4, "type": "income", "text": "oylik" },
+	{ "id": 5, "type": "income", "text": "biznes" },
+	{ "id": 6, "type": "income", "text": "qarz" }
+]

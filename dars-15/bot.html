@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Telegram Bot</title>
+</head>
+<body>
+
+	<ul id="list">
+		<li>
+			<span>Alisher</span>
+			<span>Hello</span>
+			<input type="text">
+		</li>
+	</ul>
+	
+
+<script>
+	const token = '5122011930:AAHpYAIMuUL3jXI0ErqT9c4gGz1iFWS-Eqs'
+
+	async function Updates(){
+		let response = await fetch(`https://api.telegram.org/bot${token}/getUpdates`)
+		response = await response.json()
+		list.innerHTML = null
+		for(let result of response.result){
+			console.log(result.message.text);
+			console.log(result.message.from.first_name);
+			console.log(result.message.from.id);
+
+			let li = document.createElement('li')
+			let username = document.createElement('span')
+			let message = document.createElement('span')
+			let input = document.createElement('input')
+
+			input.type = 'file'
+
+			username.textContent = result.message.from.first_name
+			message.textContent = result.message.text
+			li.append(username, message, input)
+			list.append(li)
+
+			input.onchange = () =>{
+				// if(event.keyCode == 13){
+					sendPhoto(result.message.from.id, input.files[0])
+				// }
+			}
+		}
+	}
+	Updates()
+	
+	
+	async function sendPhoto(chat_id, message){
+
+		let formData = new FormData()
+
+		formData.append('chat_id', chat_id)
+		formData.append('photo', message)
+		formData.append('reply_markup', JSON.stringify({ keyboard: [ [ {text: 'hello'} ]] }))
+		console.log(formData);
+		let response = await fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
+			method: 'POST',
+			headers: {},
+			body: formData
+		})
+		console.log(response);
+	}
+
+	async function sendDocument(chat_id, message){
+
+		let formData = new FormData()
+
+		formData.append('chat_id', chat_id)
+		formData.append('document', message)
+		formData.append('reply_markup', JSON.stringify({ keyboard: [ [ {text: 'hello'} ]] }))
+		// console.log(formData);
+		let response = await fetch(`https://api.telegram.org/bot${token}/sendDocument`, {
+			method: 'POST',
+			body: formData
+		})
+		console.log(response);
+	}
+
+
+
+</script>
+</body>
+</html>
