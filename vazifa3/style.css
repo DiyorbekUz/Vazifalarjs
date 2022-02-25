@@ -1,0 +1,25 @@
+.conteiner{
+    border-radius: 5px;
+    background-color: rgb(235, 217, 196);
+    width: 700px;
+    height: 750px;
+    padding: 3px 20px;
+    border: 5px solid brown;
+    margin-top: 10px auto;
+    margin: 20px auto;
+}
+
+.conteiner img{
+    width: 500px;
+    height: 300px;
+    border: 7px solid rgb(68, 56, 4);
+}
+
+textarea{
+    font-size: 25px;
+    width: 500px;
+    height: 300px;
+    padding-top: 20px auto;
+    border: 7px dashed rgb(184, 76, 34);
+    background-color: yellow;
+}
